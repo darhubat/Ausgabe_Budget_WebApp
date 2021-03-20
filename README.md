@@ -7,7 +7,7 @@ auf eine Web-Umgebung vorbereitet und auf GitHub dokumentiert.
 
 ***
 
-## Projektidee / Funktionen
+## Projektidee "App Ausgabenkontrolle" / Funktionen
 <!-- Italics -->
 Grundlegend ist die **Projektidee**, eine Web-App zu entwickeln, mit der die täglichen
 Geldausgaben in ein Formular eingegeben und mit einem Ausgaben-Oberthema gespeichert werden (*inkl. Tagesdatum*).
@@ -45,8 +45,7 @@ zusätzlich visualisiert werden, damit der Vergleich Ausgaben vs. Budget ersicht
 
 ## Ablaufdiagramm
 <!-- Italics -->
-![Ablaufdiagramm der Web-App "Ausgabenkontrolle](C:\Users\dhuab\PycharmProjects\Ablaufdiagramm_WebApp_Ausgabenkontrolle.jpg "Ablaufdiagramm")
+![Ablaufdiagramm der Web-App "Ausgabenkontrolle](Ablaufdiagramm_WebApp_Ausgabenkontrolle.jpg "Ablaufdiagramm")
 
 ***
-
 
