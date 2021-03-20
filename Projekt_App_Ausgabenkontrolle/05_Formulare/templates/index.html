@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Eingabe Monatsbudget</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body>
+		<h1><a href="{{ url_for("budget_eingabe")}}">Eingabe Monatsbudget</a></h1>
+		<p>Bitte gib Monat für Monat dein Budget für das Jahr ein.<br>
+			Die Daten werden anschliessend gespeichert.</p>
+
+		<form method="POST">
+			Datum / Jahr:
+    		<input type="month" name="monat_1" placeholder="Bitte Monat/Jahr eingeben">
+
+			CHF:
+            <input type="number" min="0" step="10" name="budget" placeholder="Monatsbudget in CHF">
+    		<button type="submit">speichern</button>
+		</form>
+	</body>
+</html>
