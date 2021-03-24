@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 	</head>
 	<body>
-		<h1><a href="{{ url_for("rechnen")}}">Hallo!</a></h1>
+		<h1><a href="{{ url_for('rechnen')}}">Hallo!</a></h1>
 		<form method="POST">
     		<input type="number" name="zahl_1" placeholder="Bitte gib die erste Zahl ein">
             <input type="number" name="zahl_2" placeholder="Bitte gib die zweite Zahl ein">

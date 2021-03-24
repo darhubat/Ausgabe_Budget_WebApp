@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='05_Formulare/static/css/main.css') }}">
 		<meta charset="utf-8">
-		<title>Eingabe Monatsbudget</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<title></title>
 	</head>
-	<body>
-		<h1><a href="{{ url_for("budget_eingabe")}}">Eingabe Monatsbudget</a></h1>
+	<body bgcolor=f0f8ff>
+		<h1><a href="{{ url_for('budget_eingabe') }}">Eingabe Monatsbudget</a></h1>
 		<p>Bitte gib Monat für Monat dein Budget für das Jahr ein.<br>
-			Die Daten werden anschliessend gespeichert.</p>
-
+			Die Eingabe anschliessend mit dem Button jeweils speichern.</p>
+		<br>
 		<form method="POST">
-			Datum / Jahr:
-    		<input type="month" name="monat_1" placeholder="Bitte Monat/Jahr eingeben">
+			<label>Datum / Jahr:</label>
+    		<input type="month" name="monat" placeholder="Bitte Monat/Jahr eingeben">
 
-			CHF:
+			<label>CHF:</label>
             <input type="number" min="0" step="10" name="budget" placeholder="Monatsbudget in CHF">
     		<button type="submit">speichern</button>
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1><a href="{{ url_for('ausgaben_eingabe') }}">Erfassung der Ausgaben</a></h1>
+		<p>Bitte erfasse hier deine Ausgaben mit dem Tagesdatum und Ausgabenhöhe.<br>
+		   Die Eingabe anschliessend mit dem Button jeweils speichern.</p>
+		<br>
+		<form method="POST">
+		   <label>Datum der Ausgabe:</label>
+			  <input type="date" name="datum" placeholder="Datum der Ausgabe">
+
+		   <label>CHF:</label>
+				  <input type="number" min="0" step="1" name="ausgabe" placeholder="Ausgaben in CHF">
+			<label>Ausgaben-Thema:
+				 <select name="top6" size="1">
+				   <option>Wohnen (z.B. Miete)</option>
+				   <option>Lebensmittel</option>
+				   <option>Auto/ÖV</option>
+				   <option>Essen/Reisen/Unterhaltung</option>
+				   <option>Ausbildung/Weiterbildung</option>
+					<option>Sonstiges</option>
+				 </select>
+				</label>
+			  <button type="submit">speichern</button>
 		</form>
 	</body>
 </html>

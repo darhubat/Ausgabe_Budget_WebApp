@@ -2,7 +2,7 @@ from flask import Flask
 import daten  # daten.py vorhanden, das wird aufgerufen
 
 
-app = Flask("Daten")
+app = Flask("Daten_Budget")
 
 
 @app.route("/speichern/<aktivitaet>")
