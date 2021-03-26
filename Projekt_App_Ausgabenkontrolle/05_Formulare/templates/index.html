@@ -6,15 +6,15 @@
 		<title></title>
 	</head>
 	<body bgcolor=f0f8ff>
-		<h1><a href="{{ url_for('budget_eingabe') }}">Eingabe Monatsbudget</a></h1>
+		<h1><a {{ budget_eingabe }}>Eingabe Monatsbudget</a></h1>
 		<p>Bitte gib Monat für Monat dein Budget für das Jahr ein.<br>
 			Die Eingabe anschliessend mit dem Button jeweils speichern.</p>
 		<br>
 		<form method="POST">
-			<label>Datum / Jahr:</label>
+			<label><b>Datum / Jahr: </b></label>
     		<input type="month" name="monat" placeholder="Bitte Monat/Jahr eingeben">
 
-			<label>CHF:</label>
+			<label><b>CHF: </b></label>
             <input type="number" min="0" step="10" name="budget" placeholder="Monatsbudget in CHF">
     		<button type="submit">speichern</button>
 		</form>
@@ -23,18 +23,18 @@
 		<br>
 		<br>
 		<br>
-		<h1><a href="{{ url_for('ausgaben_eingabe') }}">Erfassung der Ausgaben</a></h1>
+		<h1><a {{ ausgaben_eingabe }}>Erfassung der Ausgaben</a></h1>
 		<p>Bitte erfasse hier deine Ausgaben mit dem Tagesdatum und Ausgabenhöhe.<br>
 		   Die Eingabe anschliessend mit dem Button jeweils speichern.</p>
 		<br>
 		<form method="POST">
-		   <label>Datum der Ausgabe:</label>
+		   <label><b>Datum der Ausgabe: </b></label>
 			  <input type="date" name="datum" placeholder="Datum der Ausgabe">
 
-		   <label>CHF:</label>
+		   <label><b>CHF: </b></label>
 				  <input type="number" min="0" step="1" name="ausgabe" placeholder="Ausgaben in CHF">
-			<label>Ausgaben-Thema:
-				 <select name="top6" size="1">
+			<label><b>Ausgaben-Thema: </b>
+				 <select name="ausgaben_thema" size="1">
 				   <option>Wohnen (z.B. Miete)</option>
 				   <option>Lebensmittel</option>
 				   <option>Auto/ÖV</option>

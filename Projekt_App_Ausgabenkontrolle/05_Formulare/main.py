@@ -3,7 +3,7 @@ from flask import request
 from flask import render_template
 
 
-app = Flask("App Ausgabenkontrolle")
+app = Flask("Eingabe Formular")
 
 
 @app.route("/budget", methods=["GET", "POST"])
@@ -11,7 +11,8 @@ def budget_eingabe():
     if request.method == 'POST':
         monat = request.form['monat']
         budget = request.form['budget']
-        return monat, budget
+        rueckgabe_budget = {'Budgetmonat': monat, 'Budgetbetrag': budget}
+        return rueckgabe_budget
     else:
         return render_template("index.html")
 
@@ -22,7 +23,8 @@ def ausgaben_eingabe():
         datum = request.form['datum']
         ausgabe = request.form['ausgabe']
         ausgaben_thema = request.form['ausgaben_thema']
-        return datum, ausgabe, ausgaben_thema
+        rueckgabe_ausgaben = {'Datum': datum, 'Ausgabenbetrag': ausgabe, 'Thema': ausgaben_thema}
+        return rueckgabe_ausgaben
     else:
         return render_template("index.html")
 

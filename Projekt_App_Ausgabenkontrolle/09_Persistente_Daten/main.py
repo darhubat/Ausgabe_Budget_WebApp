@@ -2,13 +2,12 @@ from flask import Flask
 import daten  # daten.py vorhanden, das wird aufgerufen
 
 
-app = Flask("Daten_Budget")
+app = Flask("Daten_Speicherung")
 
 
-@app.route("/speichern/<aktivitaet>")
+@app.route("/speichern")
 def speichern(aktivitaet):
     zeitpunkt, aktivitaet = daten.aktivitaet_speichern(aktivitaet)
-
     return "Gespeichert: " + "etwas" + " um " + str("jetzt")
 
 
