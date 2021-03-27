@@ -39,4 +39,3 @@ def speichern_budget(budget):
     datei = "budget.json"
     with open(datei, "w") as open_file:
         json.dump(budget, open_file, indent=4)
-

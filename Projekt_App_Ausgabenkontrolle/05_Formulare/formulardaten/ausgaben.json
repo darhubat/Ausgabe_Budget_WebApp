@@ -1,0 +1,35 @@
+{
+    "Key": {
+        "Datum": "2021-04-02",
+        "Ausgabenbetrag": "12",
+        "Thema": "Wohnen (z.B. Miete)"
+    },
+    "ID-Key": "32021-03-2823",
+    "Datum": "2021-04-03",
+    "Ausgabenbetrag": "23",
+    "Thema": "Lebensmittel",
+    "12021-03-2712": "key",
+    "22021-03-2712": "key",
+    "12021-03-2913": "id-key",
+    "22021-03-2920": "id-key",
+    "32021-03-2934": "id-key",
+    "22021-04-0323": "id-key",
+    "12021-04-0523": {
+        "12021-04-0523": "id-key",
+        "Datum": "2021-04-05",
+        "Ausgabenbetrag": "23",
+        "Thema": "Lebensmittel"
+    },
+    "22021-04-0934": {
+        "22021-04-0934": "id-key",
+        "Datum": "2021-04-09",
+        "Ausgabenbetrag": "34",
+        "Thema": "Auto/Zug"
+    },
+    "42021-03-3073": {
+        "42021-03-3073": "id-key",
+        "Datum": "2021-03-30",
+        "Ausgabenbetrag": "73",
+        "Thema": "Lebensmittel"
+    }
+}

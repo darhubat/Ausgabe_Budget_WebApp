@@ -37,7 +37,7 @@ def viz():
 def index():
     div = viz()
     # return str([str(i) for i in data()])
-    return render_template('index.html', viz_div=div)
+    return render_template('budget.html', viz_div=div)
 
 
 if __name__ == '__main__':

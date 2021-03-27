@@ -15,7 +15,7 @@ def hallo(name=False):
         return "Not Hallo World again..."
 
 
-    return render_template("index.html")
+    return render_template("budget.html")
 
 
 

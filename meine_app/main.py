@@ -15,7 +15,7 @@ def rechnen():
         antwort = "Die Summe deiner eingegebenen Zahl ergibt: " + str(summe)
         return antwort
     else:
-        return render_template("index.html")
+        return render_template("budget.html")
 
 @app.route("/testvis")
 def testvis():

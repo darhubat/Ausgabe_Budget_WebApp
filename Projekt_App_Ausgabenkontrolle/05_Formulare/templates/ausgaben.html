@@ -6,28 +6,17 @@
 		<title></title>
 	</head>
 	<body bgcolor=f0f8ff>
-		<h1><a {{ budget_eingabe }}>Eingabe Monatsbudget</a></h1>
-		<p>Bitte gib Monat für Monat dein Budget für das Jahr ein.<br>
-			Die Eingabe anschliessend mit dem Button jeweils speichern.</p>
-		<br>
-		<form method="POST">
-			<label><b>Datum / Jahr: </b></label>
-    		<input type="month" name="monat" placeholder="Bitte Monat/Jahr eingeben">
-
-			<label><b>CHF: </b></label>
-            <input type="number" min="0" step="10" name="budget" placeholder="Monatsbudget in CHF">
-    		<button type="submit">speichern</button>
-		</form>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 		<h1><a {{ ausgaben_eingabe }}>Erfassung der Ausgaben</a></h1>
-		<p>Bitte erfasse hier deine Ausgaben mit dem Tagesdatum und Ausgabenhöhe.<br>
-		   Die Eingabe anschliessend mit dem Button jeweils speichern.</p>
+        <br>
+		<p><i>Bitte erfasse hier deine Ausgaben mit dem Tagesdatum und Ausgabenhöhe.<br>
+		   Die Eingabe anschliessend mit dem Button jeweils speichern.</i></p>
 		<br>
 		<form method="POST">
+
+			<label><b>Nr. Tageserfassung (ID): </b></label>
+			<input type="number" name="id_key" min="0" step="1" placeholder="Nr.">
+			<br>
+			<br>
 		   <label><b>Datum der Ausgabe: </b></label>
 			  <input type="date" name="datum" placeholder="Datum der Ausgabe">
 
@@ -37,7 +26,7 @@
 				 <select name="ausgaben_thema" size="1">
 				   <option>Wohnen (z.B. Miete)</option>
 				   <option>Lebensmittel</option>
-				   <option>Auto/ÖV</option>
+				   <option>Auto/Zug</option>
 				   <option>Essen/Reisen/Unterhaltung</option>
 				   <option>Ausbildung/Weiterbildung</option>
 					<option>Sonstiges</option>

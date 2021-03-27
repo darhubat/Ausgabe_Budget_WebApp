@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='05_Formulare/static/css/main.css') }}">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body bgcolor=f0f8ff>
+		<h1><a {{ budget_eingabe }}>Eingabe Monatsbudget</a></h1>
+		<br>
+		<p><i>Bitte gib Monat für Monat dein Budget für das Jahr ein.<br>
+			Die Eingabe anschliessend mit dem Button jeweils speichern.</i></p>
+		<br>
+		<form method="POST">
+			<label><b>Datum / Jahr: </b></label>
+    		<input type="month" name="monat" placeholder="Bitte Monat/Jahr eingeben">
+
+			<label><b>CHF: </b></label>
+            <input type="number" min="0" step="10" name="budget" placeholder="Monatsbudget in CHF">
+    		<button type="submit">speichern</button>
+		</form>
+	</body>
+</html>

@@ -13,7 +13,7 @@ def index():
         rueckgabe_string = "Hello " + ziel_person + "!"
         return rueckgabe_string
 
-    return render_template("index.html", name="Dario")
+    return render_template("budget.html", name="Dario")
 
 
 @app.route("/test")

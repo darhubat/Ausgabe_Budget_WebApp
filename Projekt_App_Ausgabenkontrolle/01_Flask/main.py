@@ -5,9 +5,10 @@ from flask import render_template
 app = Flask("App Ausgabenkontrolle")
 
 
-@app.route("/start")
+@app.route("/")
 def startseite():
-    return render_template("index.html")
+
+    return render_template("landing_page.html")
 
 
 if __name__ == "__main__":
