@@ -27,11 +27,11 @@ def budget_eingabe():
 @app.route("/ausgaben", methods=["GET", "POST"])
 def ausgaben_eingabe():
     if request.method == 'POST':
-        id_key = request.form['id']
+        id_key = request.form['id_key']
         datum = request.form['datum']
         ausgabe = request.form['ausgabe']
         ausgaben_thema = request.form['ausgaben_thema']
-        rueckgabe_ausgaben = {id_key+datum+ausgabe: 'id-key', 'Datum': datum, 'Ausgabenbetrag': ausgabe, 'Thema': ausgaben_thema}
+        rueckgabe_ausgaben = {'Datum': datum, 'Ausgabenbetrag': ausgabe, 'Thema': ausgaben_thema}
         daten = ausgaben_laden()
         daten.update({id_key+datum+ausgabe: rueckgabe_ausgaben})
         speichern_ausgaben(daten)

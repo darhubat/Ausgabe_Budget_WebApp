@@ -1,0 +1,67 @@
+{
+    "12021-04-0123": {
+        "Datum": "2021-04-01",
+        "Ausgabenbetrag": "23",
+        "Thema": "Lebensmittel"
+    },
+    "22021-04-0123": {
+        "Datum": "2021-04-01",
+        "Ausgabenbetrag": "23",
+        "Thema": "Auto/Zug"
+    },
+    "12021-03-3156": {
+        "Datum": "2021-03-31",
+        "Ausgabenbetrag": "56",
+        "Thema": "Ausbildung/Weiterbildung"
+    },
+    "32021-04-0144": {
+        "Datum": "2021-04-01",
+        "Ausgabenbetrag": "44",
+        "Thema": "Auto/Zug"
+    },
+    "12021-04-02190": {
+        "Datum": "2021-04-02",
+        "Ausgabenbetrag": "190",
+        "Thema": "Ausbildung/Weiterbildung"
+    },
+    "12021-04-091000": {
+        "Datum": "2021-04-09",
+        "Ausgabenbetrag": "1000",
+        "Thema": "Wohnen (z.B. Miete)"
+    },
+    "12021-04-0635": {
+        "Datum": "2021-04-06",
+        "Ausgabenbetrag": "35",
+        "Thema": "Sonstiges"
+    },
+    "2021-04-1434": {
+        "Datum": "2021-04-14",
+        "Ausgabenbetrag": "34",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-05-1178": {
+        "Datum": "2021-05-11",
+        "Ausgabenbetrag": "78",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-05-1256": {
+        "Datum": "2021-05-12",
+        "Ausgabenbetrag": "56",
+        "Thema": "Auto/Zug"
+    },
+    "12021-04-1223": {
+        "Datum": "2021-04-12",
+        "Ausgabenbetrag": "23",
+        "Thema": "Lebensmittel"
+    },
+    "12021-04-10150": {
+        "Datum": "2021-04-10",
+        "Ausgabenbetrag": "150",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-04-1034": {
+        "Datum": "2021-04-10",
+        "Ausgabenbetrag": "34",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    }
+}
