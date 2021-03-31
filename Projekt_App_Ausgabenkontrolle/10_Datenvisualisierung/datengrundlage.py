@@ -4,9 +4,10 @@ import datetime as dt
 
 def daten_budgeteingabe():
     df = pd.read_json(r'Projekt_App_Ausgabenkontrolle/05_Formulare/budget.json')
-    budget_daten = df.T  # transponiert die Tabelle in gewünschte Form
-    budget_daten['Jahr'] = pd.DatetimeIndex(budget_daten['Budgetmonat']).year
-    budget_daten['Monat'] = pd.DatetimeIndex(budget_daten['Budgetmonat']).month
+    df = df.T  # transponiert die Tabelle in gewünschte Form
+    df['Budgetbetrag'] = df['Budgetbetrag'].apply(pd.to_numeric)  # Ausgaben als Zahl definieren, war ein Objekt
+    df['Budgetmonat'] = pd.to_datetime(df['Budgetmonat'])  # Datum als datetime definieren für spätere Gruppierung
+    budget_daten = df.groupby([df['Budgetmonat'].dt.year.rename('Jahr'), df['Budgetmonat'].dt.month_name().rename('Monat')])['Budgetbetrag'].sum().reset_index()
     return budget_daten
 
 
