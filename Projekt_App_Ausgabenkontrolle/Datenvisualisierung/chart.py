@@ -4,8 +4,6 @@ from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengr
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_mergen
 
 
-
-
 def data_viz():
     data = daten_mergen()
     return data
@@ -19,3 +17,15 @@ def viz_barchart():
     fig.update_layout(xaxis_title='Monate', yaxis_title='Betrag in CHF')
     div = fig.show()
     return div
+
+
+def viz_histogram():
+    data = data_viz()
+    fig = px.histogram(data, x='date', y='Betrag', hover_name='typ', hover_data=['Thema'], color='typ',
+                        title='Ausgaben-/Budgetvergleich', barmode='group')
+    fig.update_layout(xaxis_title='Monat/Jahr', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
+    fig.update_traces(xbins_size="M1")
+    fig.update_xaxes(ticklabelmode='period', dtick='M1', tickformat='%b\n%Y', showspikes=True)
+    fig.update_yaxes(showspikes=True)
+    div_1 = fig.show()
+    return div_1

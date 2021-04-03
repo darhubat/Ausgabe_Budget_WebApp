@@ -21,11 +21,27 @@ def viz_barchart():
     #  div = plot(fig, output_type='div')
     return div
 
+def viz_histogram():
+    data = data_viz()
+    fig = px.histogram(data, x='date', y='Betrag', hover_name='typ', hover_data=['Thema'], color='typ',
+                        title='Ausgaben-/Budgetvergleich', barmode='group')
+    fig.update_layout(xaxis_title='Monat/Jahr', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
+    fig.update_traces(xbins_size="M1")
+    fig.update_xaxes(ticklabelmode='period', dtick='M1', tickformat='%b\n%Y', showspikes=True)
+    fig.update_yaxes(showspikes=True)
+    div_1 = fig.show()
+    return div_1
+
 
 @app.route("/viz")
 def index():
     div = viz_barchart()
     return render_template('index.html', viz_div=div)
+
+@app.route("/viz2")
+def index_2():
+    div_1 = viz_histogram()
+    return render_template('index.html', viz_div=div_1)
 
 
 if __name__ == '__main__':
