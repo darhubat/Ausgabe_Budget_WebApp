@@ -63,5 +63,15 @@
         "Datum": "2021-04-10",
         "Ausgabenbetrag": "34",
         "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-06-05200": {
+        "Datum": "2021-06-05",
+        "Ausgabenbetrag": "200",
+        "Thema": "Ausbildung/Weiterbildung"
+    },
+    "12021-07-151000": {
+        "Datum": "2021-07-15",
+        "Ausgabenbetrag": "1000",
+        "Thema": "Wohnen (z.B. Miete)"
     }
 }

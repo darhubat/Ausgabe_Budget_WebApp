@@ -1,9 +1,7 @@
 
 <!DOCTYPE HTML>
 <!--
-	Projection by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
 -->
 <html>
 	<head>
@@ -36,7 +34,8 @@
 						<br>
 						<br>
 					</header>
-					<button type="button" ><strong>Erfassen der Ausgaben</strong></button>
+					<form action="http://127.0.0.1:5000/ausgaben" method="get" target="_blank">
+					<button type="submit" ><strong>Erfassen der Ausgaben</strong></button>
 					<p>Mit dieser Funktion können Sie die täglichen Ausgaben erfassen und speichern. <br>
 					Bitte geben Sie jeweils immer folgende Parameter ein:
 					<ul>
@@ -49,7 +48,9 @@
 					<br>
 					<br>
 
-					<button type="button" ><strong>Erfassen des Monatsbudgets</strong></button>
+					<form action="http://127.0.0.1:5000/budget" method="get" target="_blank">
+					<button type="submit" ><strong>Erfassen des Monatsbudgets</strong></button>
+					</form>
 					<p>Mit dieser Funktion können Sie die Monatsbudget erfassen und speichern. <br>
 					Bitte geben Sie jeweils immer folgende Parameter ein:
 					<ul>
@@ -60,7 +61,9 @@
 					<br>
 					<br>
 
-					<button type="button" ><strong>Visualisierungen aufrufen</strong></button>
+					<form action="http://127.0.0.1:5000/viz" method="get" target="_blank">
+					<button type="submit" ><strong>Visualisierungen aufrufen</strong></button>
+					</form>
 					<p>Mit den Visualisierungen können Sie die erfassten Ausgaben und das<br>
 					Budget mithilfe von Grafiken vergleichen und sehen, ob Sie Ihr Budget bereits überziehen.</p>
 					<br>

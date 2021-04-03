@@ -18,5 +18,25 @@
     "2021-12": {
         "Budgetmonat": "2021-12",
         "Budgetbetrag": "3000"
+    },
+    "2022-01": {
+        "Budgetmonat": "2022-01",
+        "Budgetbetrag": "2500"
+    },
+    "2022-02": {
+        "Budgetmonat": "2022-02",
+        "Budgetbetrag": "3000"
+    },
+    "2021-11": {
+        "Budgetmonat": "2021-11",
+        "Budgetbetrag": "2200"
+    },
+    "2021-10": {
+        "Budgetmonat": "2021-10",
+        "Budgetbetrag": "2600"
+    },
+    "2021-09": {
+        "Budgetmonat": "2021-09",
+        "Budgetbetrag": "2000"
     }
 }

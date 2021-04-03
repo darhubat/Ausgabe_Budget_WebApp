@@ -2,7 +2,7 @@ from flask import Flask
 from flask import render_template
 
 
-app = Flask("App Ausgabenkontrolle")
+app = Flask("01_App Ausgabenkontrolle")
 
 
 @app.route("/")

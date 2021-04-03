@@ -3,7 +3,7 @@ from flask import request
 from flask import render_template
 from funktionen.visualisierung import balkendiagramm
 
-app = Flask("meine App")
+app = Flask("meine 01_App")
 
 @app.route("/", methods=["GET", "POST"])
 def rechnen():

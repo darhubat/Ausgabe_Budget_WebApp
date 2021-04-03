@@ -4,7 +4,7 @@ from flask import Flask
 from flask import render_template
 
 
-app = Flask("Demo App")
+app = Flask("Demo 01_App")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
