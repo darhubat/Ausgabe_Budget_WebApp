@@ -73,5 +73,30 @@
         "Datum": "2021-07-15",
         "Ausgabenbetrag": "1000",
         "Thema": "Wohnen (z.B. Miete)"
+    },
+    "12021-06-11900": {
+        "Datum": "2021-06-11",
+        "Ausgabenbetrag": "900",
+        "Thema": "Ausbildung/Weiterbildung"
+    },
+    "12021-06-21200": {
+        "Datum": "2021-06-21",
+        "Ausgabenbetrag": "200",
+        "Thema": "Lebensmittel"
+    },
+    "12021-07-26400": {
+        "Datum": "2021-07-26",
+        "Ausgabenbetrag": "400",
+        "Thema": "Auto/Zug"
+    },
+    "2021-07-271000": {
+        "Datum": "2021-07-27",
+        "Ausgabenbetrag": "1000",
+        "Thema": "Wohnen (z.B. Miete)"
+    },
+    "12021-05-11100": {
+        "Datum": "2021-05-11",
+        "Ausgabenbetrag": "100",
+        "Thema": "Essen/Reisen/Unterhaltung"
     }
 }

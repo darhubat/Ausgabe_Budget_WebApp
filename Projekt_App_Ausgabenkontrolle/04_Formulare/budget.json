@@ -38,5 +38,13 @@
     "2021-09": {
         "Budgetmonat": "2021-09",
         "Budgetbetrag": "2000"
+    },
+    "2021-07": {
+        "Budgetmonat": "2021-07",
+        "Budgetbetrag": "1800"
+    },
+    "2021-08": {
+        "Budgetmonat": "2021-08",
+        "Budgetbetrag": "2800"
     }
 }
