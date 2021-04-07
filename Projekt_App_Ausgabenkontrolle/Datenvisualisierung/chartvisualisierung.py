@@ -1,3 +1,8 @@
+"""
+Funktionen, die den Ausgaben-/Budget-Vergleich mit Plotly Epress visualisieren und zusätzlich die Ausgaben
+nach Ausgaben-Thema zusammenfasst und ebenfalls visuell darstellt
+"""
+
 import plotly.express as px
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_budgeteingabe
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_ausgabeneingabe

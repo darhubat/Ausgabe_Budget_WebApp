@@ -1,9 +1,14 @@
+"""
+Funktionen, welche die gespeicherten Daten aus der JSON-Dateien (Budget/Ausgaben) mithilfe von Pandas in die
+richtige Form bringt und mergt, um die Datenvisualisierung mit Plotly Express zu erstellen
+"""
+
 import pandas as pd
 import datetime as dt
 
 
 def daten_budgeteingabe():
-    df = pd.read_json(r'Projekt_App_Ausgabenkontrolle/04_Formulare/budget.json')
+    df = pd.read_json(r'Projekt_App_Ausgabenkontrolle/Formulare/budget.json')
     df = df.T  # transponiert die Tabelle in gewünschte Form
     df['Budgetbetrag'] = df['Budgetbetrag'].apply(pd.to_numeric)  # Ausgaben als Zahl definieren, war ein Objekt
     df['Budgetmonat'] = pd.to_datetime(df['Budgetmonat'])  # Datum als datetime definieren für spätere Gruppierung
@@ -16,7 +21,7 @@ def daten_budgeteingabe():
 
 
 def daten_ausgabeneingabe():
-    df = pd.read_json(r'Projekt_App_Ausgabenkontrolle/04_Formulare/ausgaben.json')
+    df = pd.read_json(r'Projekt_App_Ausgabenkontrolle/Formulare/ausgaben.json')
     df = df.T
     df['Datum'] = pd.to_datetime(df['Datum'])  # Datum als datetime definieren für spätere Gruppierung
     df['Ausgabenbetrag'] = df['Ausgabenbetrag'].apply(pd.to_numeric)  # Ausgaben als Zahl definieren, war ein Objekt

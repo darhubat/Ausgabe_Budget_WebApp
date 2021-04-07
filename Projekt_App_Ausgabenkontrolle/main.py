@@ -1,30 +1,62 @@
+"""
+main.py File für das Starten der Web-App Ausgabenkontrolle
+"""
+
 from flask import Flask
 from flask import render_template
+from flask import request
+from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import budget_laden
+from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import speichern_budget
+from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import ausgaben_laden
+from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import speichern_ausgaben
 import plotly.express as px
+from plotly.offline import plot
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_mergen
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_ausgabeneingabe
-from plotly.offline import plot
 
 
-app = Flask("Datenvisualisierung")
+app = Flask("App Ausgabenkontrolle")
+
+
+@app.route("/")
+def startseite():
+
+    return render_template("landing_page.html")
+
+
+@app.route("/ausgaben", methods=["GET", "POST"])
+def ausgaben_eingabe():
+    if request.method == 'POST':
+        id_key = request.form['id_key']
+        datum = request.form['datum']
+        ausgabe = request.form['ausgabe']
+        ausgaben_thema = request.form['ausgaben_thema']
+        rueckgabe_ausgaben = {'Datum': datum, 'Ausgabenbetrag': ausgabe, 'Thema': ausgaben_thema}
+        daten = ausgaben_laden()
+        daten.update({id_key+datum+ausgabe: rueckgabe_ausgaben})
+        speichern_ausgaben(daten)
+        return "Die folgende Ausgaben-Erfassung wurde erfolgreich gespeichert: " + '<br>' + str(rueckgabe_ausgaben)
+    else:
+        return render_template("ausgaben.html")
+
+
+@app.route("/budget", methods=["GET", "POST"])
+def budget_eingabe():
+    if request.method == 'POST':
+        monat = request.form['monat']
+        budget = request.form['budget']
+        rueckgabe_budget = {'Budgetmonat': monat, 'Budgetbetrag': budget}
+        daten = budget_laden()
+        daten.update({monat: rueckgabe_budget})
+        speichern_budget(daten)
+        return "Die folgende Budget-Erfassung wurde erfolgreich gespeichert: " + '<br>' + str(rueckgabe_budget)
+    else:
+        return render_template("budget.html")
 
 
 def data_viz():
     data = daten_mergen()
     return data
-
-
-""""
-def viz_barchart():
-    data = data_viz()
-    fig = px.bar(data, x='Monat', y='Betrag', hover_data=['typ', 'Jahr', 'Monat', 'Betrag', 'Thema'], color='typ',
-                 title='Ausgaben-/Budgetvergleich', animation_frame='Jahr', barmode='group')
-    fig.update_xaxes(dtick=1, range=[1, 12])
-    fig.update_layout(xaxis_title='Monate', yaxis_title='Betrag in CHF')
-    div = fig.show()
-    #  div = plot(fig, output_type='div')
-    return div
-"""
 
 
 def viz_histogram():
@@ -64,7 +96,7 @@ def viz_histogram():
             type="date"
         )
     )
-    div_1 = fig.show()
+    div_1 = plot(fig, output_type='div')
     return div_1
 
 
@@ -80,17 +112,18 @@ def viz_histogram_thema():
     return div_2
 
 
-@app.route("/viz")
+@app.route("/viz1")
 def index():
-    div = viz_histogram()
-    return render_template('index.html', viz_div=div)
+    div_1 = viz_histogram()
+    div_1 = div_1.show()
+    return render_template('viz1.html', viz_div=div_1)
 
 
 @app.route("/viz2")
 def index_2():
-    div_1 = viz_histogram_thema()
-    return render_template('index.html', viz_div=div_1)
+    div_2 = viz_histogram_thema()
+    return render_template('viz2.html', viz_div=div_2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True, port=5000)
