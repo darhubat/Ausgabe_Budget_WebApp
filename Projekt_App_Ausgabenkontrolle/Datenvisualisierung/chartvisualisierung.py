@@ -7,6 +7,7 @@ import plotly.express as px
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_budgeteingabe
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_ausgabeneingabe
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_mergen
+from plotly.offline import plot
 
 
 def data_viz():
@@ -28,7 +29,7 @@ def viz_barchart():
 
 
 def viz_histogram():
-    data = data_viz()
+    data = daten_mergen()
     fig = px.histogram(data, x='date', y='Betrag', hover_name='typ', hover_data=['Thema'], color='typ',
                         title='Ausgaben-/Budgetvergleich', barmode='group')
     fig.update_layout(xaxis_title='Monat/Jahr', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
@@ -64,7 +65,7 @@ def viz_histogram():
             type="date"
         )
     )
-    div_1 = fig.show()
+    div_1 = plot(fig, output_type='div')
     return div_1
 
 
@@ -76,5 +77,5 @@ def viz_histogram_thema():
     fig.update_traces(xbins_size="M1")
     fig.update_xaxes(ticklabelmode='period', showspikes=True)
     fig.update_yaxes(showspikes=True)
-    div_2 = fig.show()
+    div_2 = plot(fig, output_type='div')
     return div_2

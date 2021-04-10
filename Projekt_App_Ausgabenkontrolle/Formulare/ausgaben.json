@@ -98,5 +98,15 @@
         "Datum": "2021-05-11",
         "Ausgabenbetrag": "100",
         "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "22021-04-1323": {
+        "Datum": "2021-04-13",
+        "Ausgabenbetrag": "23",
+        "Thema": "Lebensmittel"
+    },
+    "12021-02-091000": {
+        "Datum": "2021-02-09",
+        "Ausgabenbetrag": "1000",
+        "Thema": "Wohnen (z.B. Miete)"
     }
 }

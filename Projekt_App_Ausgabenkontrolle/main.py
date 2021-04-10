@@ -9,10 +9,8 @@ from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import 
 from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import speichern_budget
 from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import ausgaben_laden
 from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import speichern_ausgaben
-import plotly.express as px
-from plotly.offline import plot
-from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_mergen
-from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_ausgabeneingabe
+from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung import viz_histogram
+from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung import viz_histogram_thema
 
 
 app = Flask("App Ausgabenkontrolle")
@@ -54,73 +52,14 @@ def budget_eingabe():
         return render_template("budget.html")
 
 
-def data_viz():
-    data = daten_mergen()
-    return data
-
-
-def viz_histogram():
-    data = data_viz()
-    fig = px.histogram(data, x='date', y='Betrag', hover_name='typ', hover_data=['Thema'], color='typ',
-                        title='Ausgaben-/Budgetvergleich', barmode='group')
-    fig.update_layout(xaxis_title='Monat/Jahr', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
-    fig.update_traces(xbins_size="M1")
-    fig.update_xaxes(ticklabelmode='period', dtick='M1', tickformat='%b\n%Y', showspikes=True)
-    fig.update_yaxes(showspikes=True)
-    fig.update_layout(
-        xaxis=dict(
-            rangeselector=dict(
-                buttons=list([
-                    dict(count=1,
-                         label="1m",
-                         step="month",
-                         stepmode="backward"),
-                    dict(count=6,
-                         label="6m",
-                         step="month",
-                         stepmode="backward"),
-                    dict(count=1,
-                         label="YTD",
-                         step="year",
-                         stepmode="todate"),
-                    dict(count=1,
-                         label="1y",
-                         step="year",
-                         stepmode="backward"),
-                    dict(step="all")
-                ])
-            ),
-            rangeslider=dict(
-                visible=True
-            ),
-            type="date"
-        )
-    )
-    div_1 = plot(fig, output_type='div')
-    return div_1
-
-
-def viz_histogram_thema():
-    data = daten_ausgabeneingabe()
-    fig = px.histogram(data, x='Jahr', y='Betrag', hover_name='typ', hover_data=['Thema'], color='Thema',
-                        title='Ausgaben nach Thema', barmode='group')
-    fig.update_layout(xaxis_title='Jahre', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
-    fig.update_traces(xbins_size="M1")
-    fig.update_xaxes(ticklabelmode='period', showspikes=True)
-    fig.update_yaxes(showspikes=True)
-    div_2 = fig.show()
-    return div_2
-
-
 @app.route("/viz1")
-def index():
+def viz_ausgaben_budget():
     div_1 = viz_histogram()
-    div_1 = div_1.show()
     return render_template('viz1.html', viz_div=div_1)
 
 
 @app.route("/viz2")
-def index_2():
+def viz_ausgaben_thema():
     div_2 = viz_histogram_thema()
     return render_template('viz2.html', viz_div=div_2)
 
