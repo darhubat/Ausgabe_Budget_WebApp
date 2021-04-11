@@ -8,25 +8,12 @@ from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengr
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_ausgabeneingabe
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.datenvorbereitung.datengrundlage import daten_mergen
 from plotly.offline import plot
+import plotly.graph_objects as go
 
 
 def data_viz():
     data = daten_mergen()
     return data
-
-
-""""
-def viz_barchart():
-    data = data_viz()
-    fig = px.bar(data, x='Monat', y='Betrag', hover_data=['typ', 'Jahr', 'Monat', 'Betrag', 'Thema'], color='typ',
-                 title='Ausgaben-/Budgetvergleich', animation_frame='Jahr', barmode='group')
-    fig.update_xaxes(dtick=1, range=[1, 12])
-    fig.update_layout(xaxis_title='Monate', yaxis_title='Betrag in CHF')
-    div = fig.show()
-    #  div = plot(fig, output_type='div')
-    return div
-"""
-
 
 def viz_histogram():
     data = daten_mergen()
@@ -79,3 +66,33 @@ def viz_histogram_thema():
     fig.update_yaxes(showspikes=True)
     div_2 = plot(fig, output_type='div')
     return div_2
+
+
+def viz_table_ausgaben():
+    data = daten_ausgabeneingabe()
+    fig = go.Figure(data=[go.Table(
+        header=dict(values=list(data.columns),
+                    fill_color='paleturquoise',
+                    align='left'),
+        cells=dict(values=[data.Jahr, data.Monat, data.Thema, data.date, data.Betrag, data.typ],
+                   fill_color='lavender',
+                   align='left'))
+    ])
+    fig.update_layout(title='Bisher erfasste und gespeicherte Tagesausgaben')
+    div_3 = plot(fig, output_type='div')
+    return div_3
+
+
+def viz_table_budget():
+    data_1 = daten_budgeteingabe()
+    fig = go.Figure(data=[go.Table(
+        header=dict(values=list(data_1.columns),
+                    fill_color='paleturquoise',
+                    align='left'),
+        cells=dict(values=[data_1.Jahr, data_1.Monat, data_1.Thema, data_1.date, data_1.Betrag, data_1.typ],
+                   fill_color='lavender',
+                   align='left'))
+    ])
+    fig.update_layout(title='Bisher erfasste und gespeicherte Budgeteingaben')
+    div_4 = plot(fig, output_type='div')
+    return div_4

@@ -11,6 +11,8 @@ from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import 
 from Projekt_App_Ausgabenkontrolle.Formulare.formulardaten.datenhandling import speichern_ausgaben
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung import viz_histogram
 from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung import viz_histogram_thema
+from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung import viz_table_ausgaben
+from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung import viz_table_budget
 
 
 app = Flask("App Ausgabenkontrolle")
@@ -18,6 +20,12 @@ app = Flask("App Ausgabenkontrolle")
 
 @app.route("/")
 def startseite():
+
+    return render_template("landingpage_3.html")
+
+
+@app.route("/1")
+def startseite_1():
 
     return render_template("landing_page.html")
 
@@ -52,16 +60,28 @@ def budget_eingabe():
         return render_template("budget.html")
 
 
-@app.route("/viz1")
+@app.route("/viz")
 def viz_ausgaben_budget():
     div_1 = viz_histogram()
     return render_template('viz1.html', viz_div=div_1)
 
 
-@app.route("/viz2")
+@app.route("/viz1")
 def viz_ausgaben_thema():
     div_2 = viz_histogram_thema()
-    return render_template('viz2.html', viz_div=div_2)
+    return render_template('viz1.html', viz_div_1=div_2)
+
+
+@app.route("/viz3")
+def viz_tabelle_ausgaben():
+    div_3 = viz_table_ausgaben()
+    return render_template('viz1.html', viz_div_1=div_3)
+
+
+@app.route("/viz4")
+def viz_tabelle_budget():
+    div_4 = viz_table_budget()
+    return render_template('viz1.html', viz_div_1=div_4)
 
 
 if __name__ == "__main__":

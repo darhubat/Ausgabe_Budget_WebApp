@@ -50,5 +50,9 @@
     "2021-02": {
         "Budgetmonat": "2021-02",
         "Budgetbetrag": "1600"
+    },
+    "2021-01": {
+        "Budgetmonat": "2021-01",
+        "Budgetbetrag": "2400"
     }
 }

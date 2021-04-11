@@ -108,5 +108,35 @@
         "Datum": "2021-02-09",
         "Ausgabenbetrag": "1000",
         "Thema": "Wohnen (z.B. Miete)"
+    },
+    "12021-03-0945": {
+        "Datum": "2021-03-09",
+        "Ausgabenbetrag": "45",
+        "Thema": "Sonstiges"
+    },
+    "12021-03-2689": {
+        "Datum": "2021-03-26",
+        "Ausgabenbetrag": "89",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "2021-04-2034": {
+        "Datum": "2021-04-20",
+        "Ausgabenbetrag": "34",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-03-1522": {
+        "Datum": "2021-03-15",
+        "Ausgabenbetrag": "22",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-01-04500": {
+        "Datum": "2021-01-04",
+        "Ausgabenbetrag": "500",
+        "Thema": "Ausbildung/Weiterbildung"
+    },
+    "12021-01-281000": {
+        "Datum": "2021-01-28",
+        "Ausgabenbetrag": "1000",
+        "Thema": "Wohnen (z.B. Miete)"
     }
 }
