@@ -112,7 +112,7 @@
     "12021-03-0945": {
         "Datum": "2021-03-09",
         "Ausgabenbetrag": "45",
-        "Thema": "Sonstiges"
+        "Thema": "Auto/Zug"
     },
     "12021-03-2689": {
         "Datum": "2021-03-26",
@@ -138,5 +138,10 @@
         "Datum": "2021-01-28",
         "Ausgabenbetrag": "1000",
         "Thema": "Wohnen (z.B. Miete)"
+    },
+    "12021-03-1834": {
+        "Datum": "2021-03-18",
+        "Ausgabenbetrag": "34",
+        "Thema": "Auto/Zug"
     }
 }

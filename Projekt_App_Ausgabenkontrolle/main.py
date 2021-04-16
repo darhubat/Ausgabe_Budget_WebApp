@@ -21,13 +21,7 @@ app = Flask("App Ausgabenkontrolle")
 @app.route("/")
 def startseite():
 
-    return render_template("landingpage_3.html")
-
-
-@app.route("/1")
-def startseite_1():
-
-    return render_template("landing_page.html")
+    return render_template("landingpage.html")
 
 
 @app.route("/ausgaben", methods=["GET", "POST"])
@@ -43,7 +37,7 @@ def ausgaben_eingabe():
         speichern_ausgaben(daten)
         return "Die folgende Ausgaben-Erfassung wurde erfolgreich gespeichert: " + '<br>' + str(rueckgabe_ausgaben)
     else:
-        return render_template("ausgaben.html")
+        return render_template("formular_ausgaben.html")
 
 
 @app.route("/budget", methods=["GET", "POST"])
@@ -57,31 +51,31 @@ def budget_eingabe():
         speichern_budget(daten)
         return "Die folgende Budget-Erfassung wurde erfolgreich gespeichert: " + '<br>' + str(rueckgabe_budget)
     else:
-        return render_template("budget.html")
+        return render_template("formular_budget.html")
 
 
 @app.route("/viz")
 def viz_ausgaben_budget():
     div_1 = viz_histogram()
-    return render_template('viz1.html', viz_div=div_1)
+    return render_template('viz1.html', viz_div_1=div_1)
 
 
 @app.route("/viz1")
 def viz_ausgaben_thema():
     div_2 = viz_histogram_thema()
-    return render_template('viz1.html', viz_div_1=div_2)
+    return render_template('viz2.html', viz_div_2=div_2)
 
 
 @app.route("/viz3")
 def viz_tabelle_ausgaben():
     div_3 = viz_table_ausgaben()
-    return render_template('viz1.html', viz_div_1=div_3)
+    return render_template('viz3.html', viz_div_3=div_3)
 
 
 @app.route("/viz4")
 def viz_tabelle_budget():
     div_4 = viz_table_budget()
-    return render_template('viz1.html', viz_div_1=div_4)
+    return render_template('viz4.html', viz_div_4=div_4)
 
 
 if __name__ == "__main__":

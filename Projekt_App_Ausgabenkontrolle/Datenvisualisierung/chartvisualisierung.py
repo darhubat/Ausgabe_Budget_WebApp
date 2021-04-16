@@ -18,7 +18,7 @@ def data_viz():
 def viz_histogram():
     data = daten_mergen()
     fig = px.histogram(data, x='date', y='Betrag', hover_name='typ', hover_data=['Thema'], color='typ',
-                        title='Ausgaben-/Budgetvergleich', barmode='group')
+                         barmode='group')
     fig.update_layout(xaxis_title='Monat/Jahr', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
     fig.update_traces(xbins_size="M1")
     fig.update_xaxes(ticklabelmode='period', dtick='M1', tickformat='%b\n%Y', showspikes=True)
@@ -59,7 +59,7 @@ def viz_histogram():
 def viz_histogram_thema():
     data = daten_ausgabeneingabe()
     fig = px.histogram(data, x='Jahr', y='Betrag', hover_name='typ', hover_data=['Thema'], color='Thema',
-                        title='Ausgaben nach Thema', barmode='group')
+                         barmode='group')
     fig.update_layout(xaxis_title='Jahre', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
     fig.update_traces(xbins_size="M1")
     fig.update_xaxes(ticklabelmode='period', showspikes=True)
@@ -78,7 +78,6 @@ def viz_table_ausgaben():
                    fill_color='lavender',
                    align='left'))
     ])
-    fig.update_layout(title='Bisher erfasste und gespeicherte Tagesausgaben')
     div_3 = plot(fig, output_type='div')
     return div_3
 
@@ -93,6 +92,5 @@ def viz_table_budget():
                    fill_color='lavender',
                    align='left'))
     ])
-    fig.update_layout(title='Bisher erfasste und gespeicherte Budgeteingaben')
     div_4 = plot(fig, output_type='div')
     return div_4

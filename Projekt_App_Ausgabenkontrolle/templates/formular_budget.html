@@ -46,14 +46,22 @@
         <span class="fs-4">Web-App Ausgabenkontrolle by Darhubat</span>
       </a>
     </header>
-      <form>
-      <div class="p-5 mb-4 text-black bg-light rounded-3">
+
+    <div class="p-5 mb-4 text-white bg-dark rounded-3">
       <div class="container-fluid py-5">
-        <h2>Visualisierung Ausgaben vs. Budget</h2><br>
-        {{ viz_div_1|safe }}
+        <h2>Erfassung deiner Ausgabe</h2><br>
+        <p class="col-md-8 fs-7">Bitte gib Monat für Monat dein Budget für das Jahr ein. Die Eingabe anschliessend mit dem Button jeweils speichern.</p><br>
+
+		<form method="POST">
+			<label><b>Datum / Jahr: </b></label>
+    		<input type="month" name="monat" placeholder="Bitte Monat/Jahr eingeben">
+
+			<label><b>CHF: </b></label>
+            <input type="number" min="0" step="10" name="budget" placeholder="Monatsbudget in CHF">
+			  <button class="btn btn-primary btn-lg" type="submit">speichern</button>
+		</form>
       </div>
-    </div><br>
-      </form>
+    </div>
 
     <footer class="pt-3 mt-4 text-muted border-top">
       <br>
