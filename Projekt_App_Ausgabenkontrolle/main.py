@@ -21,7 +21,7 @@ app = Flask("App Ausgabenkontrolle")
 @app.route("/")
 def startseite():
 
-    return render_template("landingpage.html")
+    return render_template('landingpage.html')
 
 
 @app.route("/ausgaben", methods=["GET", "POST"])
@@ -35,9 +35,10 @@ def ausgaben_eingabe():
         daten = ausgaben_laden()
         daten.update({id_key+datum+ausgabe: rueckgabe_ausgaben})
         speichern_ausgaben(daten)
-        return "Die folgende Ausgaben-Erfassung wurde erfolgreich gespeichert: " + '<br>' + str(rueckgabe_ausgaben)
+        rueckgabe = "Folgende Ausgaben-Erfassung wurde erfolgreich gespeichert: " + '\n' + str(rueckgabe_ausgaben)
+        return render_template('speicherung_ausgaben.html', div=rueckgabe)
     else:
-        return render_template("formular_ausgaben.html")
+        return render_template('formular_ausgaben.html')
 
 
 @app.route("/budget", methods=["GET", "POST"])
@@ -49,9 +50,10 @@ def budget_eingabe():
         daten = budget_laden()
         daten.update({monat: rueckgabe_budget})
         speichern_budget(daten)
-        return "Die folgende Budget-Erfassung wurde erfolgreich gespeichert: " + '<br>' + str(rueckgabe_budget)
+        rueckgabe = "Folgende Budget-Erfassung wurde erfolgreich gespeichert: " + '\n' + str(rueckgabe_budget)
+        return render_template('speicherung_budget.html', div=rueckgabe)
     else:
-        return render_template("formular_budget.html")
+        return render_template('formular_budget.html')
 
 
 @app.route("/viz")

@@ -143,5 +143,15 @@
         "Datum": "2021-03-18",
         "Ausgabenbetrag": "34",
         "Thema": "Auto/Zug"
+    },
+    "12021-03-18100": {
+        "Datum": "2021-03-18",
+        "Ausgabenbetrag": "100",
+        "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-02-1234": {
+        "Datum": "2021-02-12",
+        "Ausgabenbetrag": "34",
+        "Thema": "Essen/Reisen/Unterhaltung"
     }
 }

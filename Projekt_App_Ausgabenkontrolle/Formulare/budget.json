@@ -58,5 +58,13 @@
     "2022-03": {
         "Budgetmonat": "2022-03",
         "Budgetbetrag": "2400"
+    },
+    "2022-04": {
+        "Budgetmonat": "2022-04",
+        "Budgetbetrag": "1900"
+    },
+    "2022-05": {
+        "Budgetmonat": "2022-05",
+        "Budgetbetrag": "2600"
     }
 }
