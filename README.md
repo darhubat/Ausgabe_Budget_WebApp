@@ -19,7 +19,7 @@ können, welches ebenfalls abgespeichert wird, aber hier im Monatsformat. Als Ab
 monatlichen Ausgaben und das Budget mit einem Diagramm visualisiert werden. Zusätzlich werden die erfassten Ausgaben und
 das Budget in einer Tabelle übersichtlich dargestellt.
 
-Folgende **Funktionen** soll sie beinhalten:
+Folgende **Funktionen** beinhaltet die Web-App:
 1. Eingabe & Speicherung der Monats-Budgets
 2. Eingabe & Speicherung der Tagesausgaben
 3. Visualisierung Ausgaben vs. Budget
@@ -92,7 +92,7 @@ Auf dem Formular müssen die Felder `Nr. Tageserfassung`, `Datum der Ausgabe`, `
 Anschliessend können mit dem Button `speichern` die Eingaben in der JSON-Datei `ausgaben.json` gespeichert werden.
 ![Tages-Ausgabe speichern](Projekt_App_Ausgabenkontrolle/Bilder/2_Ausgabe_erfassen.png "Tages-Ausgabe speichern")
 
-Ob die Ausgabe erfolgreich gespeichert wurde, siehst du anhand der Ausgabe welche wie folgt erscheint:
+Ob die Ausgabe erfolgreich gespeichert wurde, siehst du anhand der folgenden Ansicht:
 ![Tages-Ausgabe gespeichert](Projekt_App_Ausgabenkontrolle/Bilder/3_Ausgabe_gespeichert.png "Tages-Ausgabe gespeichert")
 Du kannst nun mit dem Button `Weitere Ausgabe erfassen` ein neues Ausgabe-Formular aufrufen und die nächste Ausgabe erfassen
 oder mit dem Button `Startseite` wieder zurück auf die Startseite navigieren.
@@ -100,13 +100,13 @@ oder mit dem Button `Startseite` wieder zurück auf die Startseite navigieren.
 ### Monats-Budget erfassen
 <!-- Italics -->
 Mit dem Button `Budget erfassen` kann ein neues Formular für die Erfassung eines Monats-Budget abgerufen werden.
-![Monats-Budget erfassen](Projekt_App_Ausgabenkontrolle/Bilder/4 Startseite_Budget.png "Monats-Budget")
+![Monats-Budget erfassen](Projekt_App_Ausgabenkontrolle/Bilder/4_Startseite_Budget.png "Monats-Budget")
 
 Auf dem Formular müssen die Felder `Monat / Jahr` und `CHF` erfasst werden.
 Anschliessend können mit dem Button `speichern` die Eingaben in der JSON-Datei `budget.json` gespeichert werden.
 ![Monats-Budget speichern](Projekt_App_Ausgabenkontrolle/Bilder/5_Budget_erfassen.png "Monats-Budget speichern")
 
-Ob die Ausgabe erfolgreich gespeichert wurde, siehst du anhand der Ausgabe welche wie folgt erscheint:
+Ob die Ausgabe erfolgreich gespeichert wurde, siehst du anhand der folgenden Ansicht:
 ![Monats-Budget gespeichert](Projekt_App_Ausgabenkontrolle/Bilder/6_Budget_gespeichert.png "Monats-Budget gespeichert")
 Du kannst nun mit dem Button `Weiteres Budget erfassen` ein neues Budget-Formular aufrufen und den nächsten Budget-Monat erfassen
 oder mit dem Button `Startseite` wieder zurück auf die Startseite navigieren.
@@ -128,12 +128,12 @@ abrufen über die Startseite der Web-App abrufen (siehe im Bild unten).
 
 Beim ersten Histogramm, welches mithilfe von `Plotly` erstellt wurde, siehst du, für was (Ausgaben-Thema) du dein Geld pro Jahr
 ausgegeben hast und kannst damit die grössten Kostenverursacher identifizieren.
-![Grafik_Ausgaben vs Budget](Projekt_App_Ausgabenkontrolle/Bilder/13_Visualisierung_Ausgaben-Thema.png "Ausgaben vs Budget")
+![Grafik_Ausgaben vs Budget](Projekt_App_Ausgabenkontrolle/Bilder/11_Visualisierung_Budget vs Ausgaben.png "Ausgaben vs Budget")
 
 Bei der zweiten Grafik, welches mithilfe von `Plotly Express` erstellt wurde, kannst du deine erfassten Tages-Ausgaben vergleichen
 mit den erfassten Monats-Budgets und siehst, wo du mehr Ausgaben als budgetiert hattest. Das Histogramm ist interaktiv und 
 kann mittels Slicer oder obenstehenden Buttons im Ansichts-Zeitraum eingeschränkt werden.
-![Grafik_Jahres-Ausgaben pro Thema](Projekt_App_Ausgabenkontrolle/Bilder/11_Visualisierung_Budget vs Ausgaben.png "Jahres-Ausgaben pro Thema")
+![Grafik_Jahres-Ausgaben pro Thema](Projekt_App_Ausgabenkontrolle/Bilder/13_Visualisierung_Ausgaben-Thema.png "Jahres-Ausgaben pro Thema")
 Mit dem Button `Startseite` kannst du auch bei den Grafiken jederzeit wieder auf die Startseite navigieren und
 deine nächste Aktion auswählen.
 
