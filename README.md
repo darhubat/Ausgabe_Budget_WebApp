@@ -124,11 +124,11 @@ Mit dem Button `Startseite` kannst du auch wieder einfach zurück auf die Ausgan
 <!-- Italics -->
 Mit den Buttons `Grafik: Ausgaben vs. Budget` bzw. `Grafik: Ausgaben-Thema` kannst du zwei unterschiedliche Visualisierungen
 abrufen über die Startseite der Web-App abrufen (siehe im Bild unten).
-![Grafiken_abrufen](Projekt_App_Ausgabenkontrolle/Bilder/10_Visualisierung_Budget vs Ausgaben_abfragen.png "Grafiken aufrufen")
+![Grafiken_abrufen](Projekt_App_Ausgabenkontrolle/Bilder/10_Visualisierung_Budget_vs_Ausgaben_abfragen.png "Grafiken aufrufen")
 
 Beim ersten Histogramm, welches mithilfe von `Plotly` erstellt wurde, siehst du, für was (Ausgaben-Thema) du dein Geld pro Jahr
 ausgegeben hast und kannst damit die grössten Kostenverursacher identifizieren.
-![Grafik_Ausgaben vs Budget](Projekt_App_Ausgabenkontrolle/Bilder/11_Visualisierung_Budget vs Ausgaben.png "Ausgaben vs Budget")
+![Grafik_Ausgaben vs Budget](Projekt_App_Ausgabenkontrolle/Bilder/11_Visualisierung_Budget_vs_Ausgaben.png "Ausgaben vs Budget")
 
 Bei der zweiten Grafik, welches mithilfe von `Plotly Express` erstellt wurde, kannst du deine erfassten Tages-Ausgaben vergleichen
 mit den erfassten Monats-Budgets und siehst, wo du mehr Ausgaben als budgetiert hattest. Das Histogramm ist interaktiv und 
