@@ -17,7 +17,7 @@ def data_viz():
 
 def viz_histogram():
     data = daten_mergen()
-    fig = px.histogram(data, x='date', y='Betrag', hover_name='typ', hover_data=['Thema'], color='typ',
+    fig = px.histogram(data, x='Date', y='Betrag', hover_name='Typ', hover_data=['Thema'], color='Typ',
                          barmode='group')
     fig.update_layout(xaxis_title='Monat/Jahr', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
     fig.update_traces(xbins_size="M1")
@@ -58,7 +58,7 @@ def viz_histogram():
 
 def viz_histogram_thema():
     data = daten_ausgabeneingabe()
-    fig = px.histogram(data, x='Jahr', y='Betrag', hover_name='typ', hover_data=['Thema'], color='Thema',
+    fig = px.histogram(data, x='Jahr', y='Betrag', hover_name='Typ', hover_data=['Thema'], color='Thema',
                          barmode='group')
     fig.update_layout(xaxis_title='Jahre', yaxis_title='Betrag in CHF', bargap=0.2, hovermode='x')
     fig.update_traces(xbins_size="M1")
@@ -74,7 +74,7 @@ def viz_table_ausgaben():
         header=dict(values=list(data.columns),
                     fill_color='paleturquoise',
                     align='left'),
-        cells=dict(values=[data.Jahr, data.Monat, data.Thema, data.date, data.Betrag, data.typ],
+        cells=dict(values=[data.Jahr, data.Monat, data.Thema, data.Date, data.Betrag, data.Typ],
                    fill_color='lavender',
                    align='left'))
     ])
@@ -88,7 +88,7 @@ def viz_table_budget():
         header=dict(values=list(data_1.columns),
                     fill_color='paleturquoise',
                     align='left'),
-        cells=dict(values=[data_1.Jahr, data_1.Monat, data_1.Thema, data_1.date, data_1.Betrag, data_1.typ],
+        cells=dict(values=[data_1.Jahr, data_1.Monat, data_1.Thema, data_1.Date, data_1.Betrag, data_1.Typ],
                    fill_color='lavender',
                    align='left'))
     ])

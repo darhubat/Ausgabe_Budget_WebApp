@@ -153,5 +153,85 @@
         "Datum": "2021-02-12",
         "Ausgabenbetrag": "34",
         "Thema": "Essen/Reisen/Unterhaltung"
+    },
+    "12021-02-1622": {
+        "Datum": "2021-02-16",
+        "Ausgabenbetrag": "22",
+        "Thema": "Lebensmittel"
+    },
+    "12021-02-2634": {
+        "Datum": "2021-02-26",
+        "Ausgabenbetrag": "34",
+        "Thema": "Lebensmittel"
+    },
+    "12021-03-1136": {
+        "Datum": "2021-03-11",
+        "Ausgabenbetrag": "36",
+        "Thema": "Sonstiges"
+    },
+    "12021-03-1445": {
+        "Datum": "2021-03-14",
+        "Ausgabenbetrag": "45",
+        "Thema": "Sonstiges"
+    },
+    "12021-02-2334": {
+        "Datum": "2021-02-23",
+        "Ausgabenbetrag": "34",
+        "Thema": "Sonstiges"
+    },
+    "12021-04-1522": {
+        "Datum": "2021-04-15",
+        "Ausgabenbetrag": "22",
+        "Thema": "Sonstiges"
+    },
+    "12021-04-1722": {
+        "Datum": "2021-04-17",
+        "Ausgabenbetrag": "22",
+        "Thema": "Essen / Reisen / Unterhaltung"
+    },
+    "12021-04-0934": {
+        "Datum": "2021-04-09",
+        "Ausgabenbetrag": "34",
+        "Thema": "Essen / Reisen / Unterhaltung"
+    },
+    "12021-04-1812": {
+        "Datum": "2021-04-18",
+        "Ausgabenbetrag": "12",
+        "Thema": "Auto / Zug"
+    },
+    "12021-04-1516": {
+        "Datum": "2021-04-15",
+        "Ausgabenbetrag": "16",
+        "Thema": "Auto / Zug"
+    },
+    "12021-01-201000": {
+        "Datum": "2021-01-20",
+        "Ausgabenbetrag": "1000",
+        "Thema": "Wohnen (z.B. Miete)"
+    },
+    "12021-01-1234": {
+        "Datum": "2021-01-12",
+        "Ausgabenbetrag": "34",
+        "Thema": "Lebensmittel"
+    },
+    "12021-04-1420": {
+        "Datum": "2021-04-14",
+        "Ausgabenbetrag": "20",
+        "Thema": "Lebensmittel"
+    },
+    "12021-04-1312": {
+        "Datum": "2021-04-13",
+        "Ausgabenbetrag": "12",
+        "Thema": "Essen / Reisen / Unterhaltung"
+    },
+    "12021-01-0512": {
+        "Datum": "2021-01-05",
+        "Ausgabenbetrag": "12",
+        "Thema": "Lebensmittel"
+    },
+    "12021-01-1334": {
+        "Datum": "2021-01-13",
+        "Ausgabenbetrag": "34",
+        "Thema": "Auto / Zug"
     }
 }

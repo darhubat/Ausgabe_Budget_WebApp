@@ -1,7 +1,7 @@
 {
     "2021-03": {
         "Budgetmonat": "2021-03",
-        "Budgetbetrag": "2000"
+        "Budgetbetrag": "2800"
     },
     "2021-04": {
         "Budgetmonat": "2021-04",
@@ -41,11 +41,11 @@
     },
     "2021-07": {
         "Budgetmonat": "2021-07",
-        "Budgetbetrag": "1800"
+        "Budgetbetrag": "2100"
     },
     "2021-08": {
         "Budgetmonat": "2021-08",
-        "Budgetbetrag": "2800"
+        "Budgetbetrag": "1900"
     },
     "2021-02": {
         "Budgetmonat": "2021-02",
@@ -53,7 +53,7 @@
     },
     "2021-01": {
         "Budgetmonat": "2021-01",
-        "Budgetbetrag": "2400"
+        "Budgetbetrag": "2300"
     },
     "2022-03": {
         "Budgetmonat": "2022-03",
@@ -66,5 +66,9 @@
     "2022-05": {
         "Budgetmonat": "2022-05",
         "Budgetbetrag": "2600"
+    },
+    "": {
+        "Budgetmonat": "",
+        "Budgetbetrag": ""
     }
 }

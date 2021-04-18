@@ -49,8 +49,8 @@
 
     <div class="p-5 mb-4 text-white bg-dark rounded-3">
       <div class="container-fluid py-5">
-        <h2>Erfassung deiner Ausgabe</h2><br>
-        <p class="col-md-8 fs-7">Bitte erfasse hier deine Ausgaben mit dem Tagesdatum, Ausgabenhöhe und Ausgaben-Thema.</p><br>
+        <h2>Erfassung deiner Tages-Ausgabe</h2><br>
+        <p class="col-md-8 fs-7">Bitte erfasse hier deine Ausgaben mit dem Tagesdatum, Ausgabenhöhe und Ausgaben-Thema.</p> <br>
 
           <form method="POST">
 			<label><b>Nr. Tageserfassung (ID): </b></label>
@@ -66,14 +66,18 @@
 				 <select name="ausgaben_thema" size="1">
 				   <option>Wohnen (z.B. Miete)</option>
 				   <option>Lebensmittel</option>
-				   <option>Auto/Zug</option>
-				   <option>Essen/Reisen/Unterhaltung</option>
-				   <option>Ausbildung/Weiterbildung</option>
+				   <option>Auto / Zug</option>
+				   <option>Essen / Reisen / Unterhaltung</option>
+				   <option>Ausbildung / Weiterbildung</option>
 					<option>Sonstiges</option>
 				 </select>
-				</label><br>
-			  <button class="btn btn-primary btn-lg" type="submit">speichern</button>
-		</form>
+				</label> <br>
+                <br>
+			  <button class="btn btn-primary btn-sm" type="submit">speichern</button>
+		</form> <br>
+        <form action="http://127.0.0.1:5000/" method="get" target="_self">
+        <button class="btn btn-primary btn-sm" type="submit">Zurück zu Startseite</button>
+        </form> <br>
       </div>
     </div>
 

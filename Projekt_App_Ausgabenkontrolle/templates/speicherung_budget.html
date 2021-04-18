@@ -49,11 +49,23 @@
       <form>
       <div class="p-5 mb-4 text-black bg-light rounded-3">
       <div class="container-fluid py-5">
-        <h2>Gespeicherte Daten "Budget"</h2><br>
-        <p>Wenn du oben auf den Titel der Seite klickst, kommst du wieder zurück auf die Startseite für deinen nächsten Aktions-Schritt.</p><br>
+        <h2>Gespeicherte Daten "Budget"</h2> <br>
+        <p>Mit den Buttons unten kannst du einen weiteren Budget-Monat erfassen oder zurück auf die Startseite navigieren.
+           Wenn du oben auf den Titel klickst, kommst du auch zurück auf die Startseite.</p> <br>
+        <span class="badge bg-success">Erfolgreich gespeichert</span>
         {{ div }}
+      </div> <br>
+      <div>
+        <form action="http://127.0.0.1:5000/budget" method="get" target="_self">
+        <button class="btn btn-primary btn-sm" type="submit">Weiteres Budget erfassen</button>
+        </form> <br>
+      </div> <br>
+      <div>
+        <form action="http://127.0.0.1:5000/" method="get" target="_self">
+        <button class="btn btn-primary btn-sm" type="submit">Zurück zu Startseite</button>
+        </form> <br>
       </div>
-    </div><br>
+      </div>
       </form>
 
     <footer class="pt-3 mt-4 text-muted border-top">
