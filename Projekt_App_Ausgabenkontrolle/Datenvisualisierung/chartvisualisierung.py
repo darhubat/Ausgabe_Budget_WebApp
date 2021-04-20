@@ -11,10 +11,6 @@ from plotly.offline import plot
 import plotly.graph_objects as go
 
 
-def data_viz():
-    data = daten_mergen()
-    return data
-
 def viz_histogram():
     data = daten_mergen()
     fig = px.histogram(data, x='Date', y='Betrag', hover_name='Typ', hover_data=['Thema'], color='Typ',

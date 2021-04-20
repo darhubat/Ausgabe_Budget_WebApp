@@ -45,6 +45,28 @@
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
         <span class="fs-4">Web-App Ausgabenkontrolle by Darhubat</span>
       </a>
+
+      <ul class="nav nav-tabs text-black">
+      <li class="nav-item">
+        <a class="nav-link active"  href="http://127.0.0.1:5000/?">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-black" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Erfassungen</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/ausgaben">Ausgabe erfassen</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/budget">Budget erfassen</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Visualisierungen</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/viz3">Übersicht: Erfasste Ausgaben</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/viz4">Übersicht: Erfasste Budgets</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/viz">Grafik: Ausgaben vs. Budget</a></li>
+          <li><a class="dropdown-item" href="http://127.0.0.1:5000/viz1">Grafik: Ausgaben-Thema</a></li>
+        </ul>
+      </li>
+    </ul>
     </header>
       <div>
         <form action="http://127.0.0.1:5000/" method="get" target="_self">

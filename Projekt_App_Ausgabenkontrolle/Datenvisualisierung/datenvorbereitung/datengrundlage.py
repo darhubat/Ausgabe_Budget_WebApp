@@ -6,6 +6,7 @@ richtige Form bringt und mergt, um die Datenvisualisierung mit Plotly Express zu
 import pandas as pd
 
 
+# JSON-Datei der Budget-Erfassungen wird mithilfe von Pandas für die Visualisierung vorbereitet
 def daten_budgeteingabe():
     df = pd.read_json(r'Formulare\budget.json')
     df = df.T  # transponiert die Tabelle in gewünschte Form
@@ -19,6 +20,7 @@ def daten_budgeteingabe():
     return budget_daten
 
 
+# JSON-Datei der Ausgaben-Erfassungen wird mithilfe von Pandas für die Visualisierung vorbereitet
 def daten_ausgabeneingabe():
     df = pd.read_json(r'Formulare\ausgaben.json')
     df = df.T
@@ -32,6 +34,7 @@ def daten_ausgabeneingabe():
     return ausgaben_daten
 
 
+# Die beiden Pandas-Tabellen oben werden in eine gemergt zur Vereinfachung der Visualisierungen
 def daten_mergen():
     budget = daten_budgeteingabe()
     ausgaben = daten_ausgabeneingabe()

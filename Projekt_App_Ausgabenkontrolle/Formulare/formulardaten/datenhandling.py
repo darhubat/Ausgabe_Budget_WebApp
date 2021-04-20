@@ -6,7 +6,7 @@ JSON-Dateien verantwortlich sind
 import json
 
 
-#   prüfen, ob ein JSON vorhanden ist für die Ausgaben, falls nein, neue erstellen
+#   Prüft, ob ein JSON-Datei im Ordner Formulare vorhanden ist für die Ausgaben, falls nein, wird eine Neue erstellt
 def ausgaben_laden():
     datei_name = 'Formulare/ausgaben.json'
 
@@ -19,14 +19,14 @@ def ausgaben_laden():
     return datei_inhalt
 
 
-#   Speichern der erfassten Ausgaben
+#   Speichert die erfassten Ausgaben in der JSON-Datei
 def speichern_ausgaben(ausgaben):
     datei = 'Formulare/ausgaben.json'
     with open(datei, "w") as open_file:
         json.dump(ausgaben, open_file, indent=4)
 
 
-#   prüfen, ob ein JSON vorhanden ist für das Budget, falls nein, neue erstellen
+#   Prüft, ob ein JSON-Datei vorhanden ist für das Budget, falls nein, wird eine Neue erstellt
 def budget_laden():
     datei_name = 'Formulare/budget.json'
 
@@ -39,7 +39,7 @@ def budget_laden():
     return datei_inhalt
 
 
-#   Speichern des erfassten Budgets
+#   Speichert die erfassten Budgets in der JSON-Datei
 def speichern_budget(budget):
     datei = 'Formulare/budget.json'
     with open(datei, "w") as open_file:
