@@ -20,7 +20,7 @@ def daten_budgeteingabe():
     return budget_daten
 
 
-# JSON-Datei der Ausgaben-Erfassungen wird mithilfe von Pandas für die Visualisierung vorbereitet
+# JSON-Datei der Ausgaben-Erfassungen wird mithilfe von Pandas für die Visualisierung vorbereitet und Summierung pro Monat
 def daten_ausgabeneingabe():
     df = pd.read_json(r'Formulare\ausgaben.json')
     df = df.T

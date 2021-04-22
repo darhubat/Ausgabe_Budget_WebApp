@@ -41,7 +41,7 @@ Folgende Programme bzw. Python-Pakete müssen installiert sein, um die Web-App z
 
 Mit folgender `Python-Datei` kann die Web-App "Ausgabenkontrolle" gestartet werden:
 
-`main.py`
+[`main.py`](Projekt_App_Ausgabenkontrolle/main.py "main.py")
 
 Die Web-App startet und kann mit einem beliebigen Gerät über die IP-Adresse und Port 5000 aufgerufen werden.
 
@@ -72,7 +72,7 @@ Folgende Visualisierungen wurden dabei mit `plotly`realisiert, die über verschi
 
 ## Ablaufdiagramm
 <!-- Italics -->
-![Ablaufdiagramm der Web-App "Ausgabenkontrolle](Projekt_App_Ausgabenkontrolle/Bilder/Ablaufdiagramm_WebApp_Ausgabenkontrolle.jpg "Ablaufdiagramm")
+![Ablaufdiagramm der Web-App "Ausgabenkontrolle](Projekt_App_Ausgabenkontrolle/Bilder/Ablaufdiagramm_WebApp_Ausgabenkontrolle.png "Ablaufdiagramm")
 
 ***
 
@@ -80,7 +80,8 @@ Folgende Visualisierungen wurden dabei mit `plotly`realisiert, die über verschi
 ### Startseite
 <!-- Italics -->
 Von der `Startseite` aus können alle Funktionen der Web-App abgerufen werden. Des Weiteren lässt sich von jeder Seite auch
-wieder zurück navigieren über den entsprechenden Button `Startseite`.
+wieder zurück navigieren über den entsprechenden Button `Startseite` oder über die Navbar `Home`. Alle Aktionen können
+ebenfalls über die Navbar erreicht werden, über die Auswahl `Home`, `Erfassungen` und `Visualisierungen`.
 ![Startseite der Web-App](Projekt_App_Ausgabenkontrolle/Bilder/0_Startseite_Übersicht.png "Startseite")
 
 ### Tages-Ausgabe erfassen
@@ -109,7 +110,7 @@ Anschliessend können mit dem Button `speichern` die Eingaben in der JSON-Datei 
 Ob die Ausgabe erfolgreich gespeichert wurde, siehst du anhand der folgenden Ansicht:
 ![Monats-Budget gespeichert](Projekt_App_Ausgabenkontrolle/Bilder/6_Budget_gespeichert.png "Monats-Budget gespeichert")
 Du kannst nun mit dem Button `Weiteres Budget erfassen` ein neues Budget-Formular aufrufen und den nächsten Budget-Monat erfassen
-oder mit dem Button `Startseite` wieder zurück auf die Startseite navigieren.
+oder mit dem Button `Startseite` oder `Home` in der Navbar wieder zurück auf die Startseite navigieren.
 
 ### Übersicht erfasste Ausgabe- und Budget-Daten 
 <!-- Italics -->
@@ -118,7 +119,7 @@ mithilfe einer interaktiven Plotly-Tabelle abrufen und hast somit immer die Übe
 ![Tabellen_aufrufen](Projekt_App_Ausgabenkontrolle/Bilder/7_Eingaben_in_Tabellenform.png "Tabellen aufrufen")
 ![Tabelle_Ausgaben](Projekt_App_Ausgabenkontrolle/Bilder/8_interaktive_Tabelle_Ausgaben.png "Tabelle Ausgaben aufrufen")
 ![Tabelle_Budget](Projekt_App_Ausgabenkontrolle/Bilder/9_interaktive_Tabelle_Budget.png "Tabelle Budget aufrufen")
-Mit dem Button `Startseite` kannst du auch wieder einfach zurück auf die Ausgangs-Seite navigieren.
+Mit dem Button `Startseite` oder `Home` in der Navbar kannst du auch wieder einfach zurück auf die Ausgangs-Seite navigieren.
 
 ### Auswertungen bzw. Visualisierungen aufrufen
 <!-- Italics -->

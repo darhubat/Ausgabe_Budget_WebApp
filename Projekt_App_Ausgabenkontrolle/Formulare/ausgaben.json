@@ -243,5 +243,10 @@
         "Datum": "2021-02-02",
         "Ausgabenbetrag": "23",
         "Thema": "Auto / Zug"
+    },
+    "12021-04-2212": {
+        "Datum": "2021-04-22",
+        "Ausgabenbetrag": "12",
+        "Thema": "Sonstiges"
     }
 }

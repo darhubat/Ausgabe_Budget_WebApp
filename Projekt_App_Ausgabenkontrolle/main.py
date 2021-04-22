@@ -58,6 +58,7 @@ def budget_eingabe():
     else:
         return render_template('formular_budget.html')
 
+
 # Histogramm-Erstellung und Anzeige Ausgaben vs. Budget
 @app.route("/viz")
 def viz_ausgaben_budget():
