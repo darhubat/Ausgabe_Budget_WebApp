@@ -8,6 +8,13 @@ mithilfe von PyCharm auf eine Web-Umgebung vorbereitet und auf GitHub dokumentie
 <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/1f00adb12c4601486913e8aad8d6c27b42652d1fae54829e3fb6398dbb938ebd/68747470733a2f2f696d672e736869656c64732e696f2f636f6e64612f766e2f636f6e64612d666f7267652f6a696e6a61323f6c6162656c3d6a696e6a6132"><img src="https://camo.githubusercontent.com/1f00adb12c4601486913e8aad8d6c27b42652d1fae54829e3fb6398dbb938ebd/68747470733a2f2f696d672e736869656c64732e696f2f636f6e64612f766e2f636f6e64612d666f7267652f6a696e6a61323f6c6162656c3d6a696e6a6132" alt="Conda (channel only)" data-canonical-src="https://img.shields.io/conda/vn/conda-forge/jinja2?label=jinja2" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/b55d49138f212e4d36e9cc00fa0e24725bc459b34cc730df940c575d3ab7eb6f/68747470733a2f2f696d672e736869656c64732e696f2f636f6e64612f766e2f636f6e64612d666f7267652f706c6f746c793f6c6162656c3d706c6f746c79"><img src="https://camo.githubusercontent.com/b55d49138f212e4d36e9cc00fa0e24725bc459b34cc730df940c575d3ab7eb6f/68747470733a2f2f696d672e736869656c64732e696f2f636f6e64612f766e2f636f6e64612d666f7267652f706c6f746c793f6c6162656c3d706c6f746c79" alt="Conda (channel only)" data-canonical-src="https://img.shields.io/conda/vn/conda-forge/plotly?label=plotly" style="max-width:100%;"></a>
 
+Für die Startseite wurde auf das bestehende Template "jumbotron" von Getbootstrap zurückgegeriffen. Die Vorlage wurde
+entsprechend auf die Bedürfnisse dieser App angepasst bzw. verfeinert und mit weiteren Attributen ergänzt, wie z.B. mit
+einer Navbar.
+
+*Quelle:* [https://getbootstrap.com/docs/5.0/examples/jumbotron/](https://getbootstrap.com/docs/5.0/examples/jumbotron/)
+
+
 ***
 
 ## Projektidee der App "Ausgabenkontrolle" / Funktionen
@@ -44,6 +51,18 @@ Mit folgender `Python-Datei` kann die Web-App "Ausgabenkontrolle" gestartet werd
 [`main.py`](Projekt_App_Ausgabenkontrolle/main.py "main.py")
 
 Die Web-App startet und kann mit einem beliebigen Gerät über die IP-Adresse und Port 5000 aufgerufen werden.
+
+***
+
+## Ordner-Struktur in GitHub
+<!-- Italics -->
+Die Struktur in GitHub setzt sich wie folgt zusammen:
+
+* `Bilder` *Aufrufen: [hier](Projekt_App_Ausgabenkontrolle/Bilder) klicken.*
+* `Datenvisualisierung` *Aufrufen: [hier](Projekt_App_Ausgabenkontrolle/Datenvisualisierung) klicken.*
+* `Formulare` *Aufrufen: [hier](Projekt_App_Ausgabenkontrolle/Formulare) klicken.*
+* `static` *Aufrufen: [hier](Projekt_App_Ausgabenkontrolle/static) klicken.*
+* `templates` *Aufrufen: [hier](Projekt_App_Ausgabenkontrolle/templates) klicken.*
 
 ***
 
@@ -137,6 +156,5 @@ kann mittels Slicer oder obenstehenden Buttons im Ansichts-Zeitraum eingeschrän
 ![Grafik_Jahres-Ausgaben pro Thema](Projekt_App_Ausgabenkontrolle/Bilder/13_Visualisierung_Ausgaben-Thema.png "Jahres-Ausgaben pro Thema")
 Mit dem Button `Startseite` kannst du auch bei den Grafiken jederzeit wieder auf die Startseite navigieren und
 deine nächste Aktion auswählen.
-
 
 ***
