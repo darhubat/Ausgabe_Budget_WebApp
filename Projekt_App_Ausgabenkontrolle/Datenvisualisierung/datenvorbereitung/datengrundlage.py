@@ -1,12 +1,14 @@
 """
 Funktionen, welche die gespeicherten Daten aus der JSON-Dateien (Budget/Ausgaben) mithilfe von Pandas in die
-richtige Form bringt und mergt, um die Datenvisualisierung mit Plotly Express zu erstellen
+richtige Form bringen und mergt, um die Datenvisualisierung mit Plotly Express zu erstellen
 """
 
 import pandas as pd
 
-
-# JSON-Datei der Budget-Erfassungen wird mithilfe von Pandas für die Visualisierung vorbereitet
+"""
+Damit die Viusalisierung der Budget-Eingaben aus der JSON-Datei visualisiert werden können, werden die Daten mit Pandas
+in eine Tabellenform gebracht, die Spaltennamen vereinheitlicht und für den späteren Merge mit den Ausgaben-Eingaben vorbereitet
+"""
 def daten_budgeteingabe():
     df = pd.read_json(r'Formulare\budget.json')
     df = df.T  # transponiert die Tabelle in gewünschte Form
@@ -20,7 +22,11 @@ def daten_budgeteingabe():
     return budget_daten
 
 
-# JSON-Datei der Ausgaben-Erfassungen wird mithilfe von Pandas für die Visualisierung vorbereitet und Summierung pro Monat
+"""
+Damit die Viusalisierung der Ausgaben-Eingaben aus der JSON-Datei visualisiert werden können, werden die Daten mit Pandas
+in eine Tabellenform gebracht, die Tages-Erfassungen auf Monatsbasis summiert und die Spaltennamen vereinheitlicht und
+für den späteren Merge mit den Budget-Eingaben vorbereitet
+"""
 def daten_ausgabeneingabe():
     df = pd.read_json(r'Formulare\ausgaben.json')
     df = df.T
@@ -34,7 +40,10 @@ def daten_ausgabeneingabe():
     return ausgaben_daten
 
 
-# Die beiden Pandas-Tabellen oben werden in eine gemergt zur Vereinfachung der Visualisierungen
+"""
+Die beiden vorbereiteten Pandas-Tabellen der Budgets und Ausgaben werden hier gemergt in einer gemeinsamen Tabelle, was
+die Visualisierungen vereinfacht
+"""
 def daten_mergen():
     budget = daten_budgeteingabe()
     ausgaben = daten_ausgabeneingabe()

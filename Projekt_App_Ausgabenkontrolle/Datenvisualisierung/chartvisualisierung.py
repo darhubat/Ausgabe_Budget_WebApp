@@ -11,6 +11,10 @@ from plotly.offline import plot
 import plotly.graph_objects as go
 
 
+"""
+Mit dieser Funktion wird das Histogramm mit dem Vergleich der Budgets und Ausgaben auf Monatsbasis erstellt. Die Grafik
+wird als Offline-Plot generiert, womit die Darstellung in HTML ermöglicht wird
+"""
 def viz_histogram():
     data = daten_mergen()
     fig = px.histogram(data, x='Date', y='Betrag', hover_name='Typ', hover_data=['Thema'], color='Typ',
@@ -52,6 +56,10 @@ def viz_histogram():
     return div_1
 
 
+"""
+Mit dieser Funktion wird das Histogramm werden die Ausgaben pro Jahr und Ausgaben-Thema dargestellt. Die Grafik
+wird als Offline-Plot generiert, womit die Darstellung in HTML ermöglicht wird.
+"""
 def viz_histogram_thema():
     data = daten_ausgabeneingabe()
     fig = px.histogram(data, x='Jahr', y='Betrag', hover_name='Typ', hover_data=['Thema'], color='Thema',
@@ -64,6 +72,10 @@ def viz_histogram_thema():
     return div_2
 
 
+"""
+Mit diesen Funktionen werden Plotly-Tabellen erstellt, mit denen geprüft werden kann, welche Erfassungen bereits 
+erfolgt sind. Die Grafiken werden ebenfalls als Offline-Plot generiert, womit die Darstellung in HTML ermöglicht wird.
+"""
 def viz_table_ausgaben():
     data = daten_ausgabeneingabe()
     fig = go.Figure(data=[go.Table(

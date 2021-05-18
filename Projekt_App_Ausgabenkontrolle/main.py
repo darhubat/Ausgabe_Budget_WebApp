@@ -18,14 +18,21 @@ from Projekt_App_Ausgabenkontrolle.Datenvisualisierung.chartvisualisierung impor
 app = Flask("App Ausgabenkontrolle")
 
 
-# Startseite der Web-App "Ausgabenkontrolle"
+"""
+Hier wird die Startseite bzw. mit Bootstrap erstellte Landing-Page aufgerufen, mit der dann auf die weiteren Seiten
+navigiert werden kann.
+"""
 @app.route("/")
 def startseite():
 
     return render_template('landingpage.html')
 
 
-# Formular für die Erfassung der Ausgaben
+"""
+Um überhaupt Ausgaben erfassen zu können, wird über diese Funktion das Ausgabeformular aufgerufen, über welches die
+Ausgaben dann in eine JSON-Datei gespeichert werden mit einem eindeutigen ID-Key, damit keine Ausgabe überschrieben
+werden.
+"""
 @app.route("/ausgaben", methods=["GET", "POST"])
 def ausgaben_eingabe():
     if request.method == 'POST':
@@ -43,7 +50,10 @@ def ausgaben_eingabe():
         return render_template('formular_ausgaben.html')
 
 
-# Formular für die Erfassung der Monats-Budgets
+"""
+Um  Monatsbudgets erfassen zu können, wird über diese Funktion das Budgetformular aufgerufen, über welches die
+Budgets dann in eine JSON-Datei gespeichert werden.
+"""
 @app.route("/budget", methods=["GET", "POST"])
 def budget_eingabe():
     if request.method == 'POST':
@@ -59,28 +69,30 @@ def budget_eingabe():
         return render_template('formular_budget.html')
 
 
-# Histogramm-Erstellung und Anzeige Ausgaben vs. Budget
+"""
+Mit den nachfolgenden Funktionen können die verschiedenen Visualisierungen aufgerufen werden, die im Directory 
+'Datenvisualisierung' erstellt wurden aufgrund der erfassten Angaben aus dem Ausgaben- und Budgetformular. Es ermöglicht
+den visuellen Vergleich der aktuellen Ausgaben zu den definierten Monats-Budgets, wofür Geld ausgegeben wurde und die
+einzelnen Erfassungen.
+"""
 @app.route("/viz")
 def viz_ausgaben_budget():
     div_1 = viz_histogram()
     return render_template('viz1.html', viz_div_1=div_1)
 
 
-# Histogramm-Erstellung und Anzeige der Jahres-Ausgaben pro Thema-Bereich
 @app.route("/viz1")
 def viz_ausgaben_thema():
     div_2 = viz_histogram_thema()
     return render_template('viz2.html', viz_div_2=div_2)
 
 
-# Tabellarische Darstellung aller erfassten Ausgaben
 @app.route("/viz3")
 def viz_tabelle_ausgaben():
     div_3 = viz_table_ausgaben()
     return render_template('viz3.html', viz_div_3=div_3)
 
 
-# Tabellarische Darstellung aller erfassten Monats-Budgets
 @app.route("/viz4")
 def viz_tabelle_budget():
     div_4 = viz_table_budget()
