@@ -248,5 +248,15 @@
         "Datum": "2021-04-22",
         "Ausgabenbetrag": "12",
         "Thema": "Sonstiges"
+    },
+    "22021-06-2534": {
+        "Datum": "2021-06-25",
+        "Ausgabenbetrag": "34",
+        "Thema": "Lebensmittel"
+    },
+    "42021-07-0125": {
+        "Datum": "2021-07-01",
+        "Ausgabenbetrag": "25",
+        "Thema": "Lebensmittel"
     }
 }

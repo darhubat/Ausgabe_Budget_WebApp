@@ -1,6 +1,6 @@
 ## Ausgangslage
 <!-- Italics -->
-Im Rahmen des Master-Studiengangs Information & Data Mangement
+Im Rahmen des Master-Studiengangs Information & Data Management
 an der FH Graubünden soll im Modul Python 2 eine Web-App erstellt werden. Die Programmierung basiert auf Python, wird aber 
 mithilfe von PyCharm auf eine Web-Umgebung vorbereitet und auf GitHub dokumentiert.
 
